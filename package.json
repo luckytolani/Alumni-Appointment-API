@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/luckytolani/Job-scheduling#readme",
   "dependencies": {
+    "agenda": "^4.2.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.13.8",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.12"
   }
 }

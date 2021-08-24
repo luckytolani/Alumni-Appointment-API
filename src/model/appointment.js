@@ -9,6 +9,10 @@ const appointmentSchema = new mongoose.Schema({
         type: String,
         required:true,
     },
+    month:{
+        type: String,
+        required:true,
+    },
     slot:{
         type: Number,
         required:true,
