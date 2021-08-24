@@ -1,0 +1,28 @@
+{
+  "name": "Job-scheduling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luckytolani/Job-scheduling.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luckytolani/Job-scheduling/issues"
+  },
+  "homepage": "https://github.com/luckytolani/Job-scheduling#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.8",
+    "nodemon": "^2.0.12"
+  }
+}
