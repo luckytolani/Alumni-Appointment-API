@@ -6,18 +6,18 @@ const appointmentSchema = new mongoose.Schema({
         require:true,
     },
     date:{
-        type: String,
-        required:true,
-    },
-    month:{
-        type: String,
+        type: Date,
         required:true,
     },
     slot:{
         type: Number,
         required:true,
+    },
+    pending:{
+        type: Boolean,
+        required: true,
+        default:true,
     }
-
 })
 
 const Appointment = mongoose.model('Appointment', appointmentSchema)
