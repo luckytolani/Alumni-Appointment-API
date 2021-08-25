@@ -2,7 +2,7 @@ const Agenda = require("agenda");
 
 const agenda = new Agenda({
   db: {
-    address: 'mongodb+srv://lucky:lucky@cluster0.mojdf.mongodb.net/task?retryWrites=true&w=majority',
+    address: process.env.DATABASE,
     collection: "Fetching-jobs",
   },
 });
