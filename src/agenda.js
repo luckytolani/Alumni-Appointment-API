@@ -18,8 +18,9 @@ agenda
 (async function(){
   await agenda.start();
   console.log("Agenda is started");
-  await agenda.every("10 seconds", 'Fetch Appointment')
-  // await agenda.every("1 minutes", 'Print activity')
+  await agenda.every('* 14 * * *', 'Fetch Appointment-slot1')
+  await agenda.every('* 17 * * *', 'Fetch Appointment-slot2')
+  await agenda.every('* 19 * * *', 'Fetch Appointment-slot3')
 })();
 
 

@@ -21,6 +21,7 @@
   "homepage": "https://github.com/luckytolani/Job-scheduling#readme",
   "dependencies": {
     "agenda": "^4.2.1",
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.13.8",
