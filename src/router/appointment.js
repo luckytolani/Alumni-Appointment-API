@@ -58,7 +58,6 @@ router.get("/checkavailable", async (req, res) => {
 
 //API for Accepting the student appointment by alumni
 
-
 router.patch("/accept/:id", async (req, res) => {
   try {
     const data = await Appointment.findByIdAndUpdate(req.params.id, { "pending": false });

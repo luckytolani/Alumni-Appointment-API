@@ -1,6 +1,6 @@
 const Agenda = require("agenda");
 
-// Getting JOBS to be done
+//settinf Agenda database & database url
 const agenda = new Agenda({
   db: {
     address: process.env.DATABASE,
@@ -20,7 +20,8 @@ agenda
   await agenda.start();
   console.log("Agenda is started");
 
-  //JOBS which checks every day on ending time of respective slot that appointment is there or not if its there then it deletes that appointment because now it is of no use
+  //JOBS which checks every day on ending time of respective slots
+  //  if appointment is there or not, if its there then it deletes that appointment
   
   await agenda.every('* 14 * * *', 'Fetch Appointment-slot1')    //for slot 1
   

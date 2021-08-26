@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-//schema for collection user
+//schema for collection of user
 const userSchema = new mongoose.Schema({
     user:{
         type:String,
