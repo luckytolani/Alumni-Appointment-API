@@ -5,6 +5,8 @@ const saltRounds = 10;
 
 const router = new express.Router();
 
+//API for Signup of user
+
 router.post("/signup", async (req, res) => {
 
     bcrypt.hash(req.body.password, saltRounds, async function (err, hash) {
@@ -14,7 +16,6 @@ router.post("/signup", async (req, res) => {
             maxapp: req.body.maxapp
         }
         const t = new User(data)
-        console.log(t);
         try {
             await t.save();
             res.status(201).send(t);
@@ -25,31 +26,11 @@ router.post("/signup", async (req, res) => {
 
 });
 
-// router.get("/checkstudent/:id" , async(req,res) => {
-//     console.log(req.params.id);
-
-//     await User.findOne({_id:req.params.id})
-//       .then((data) => {
-//           if(data)
-//           {
-//               console.log(data.maxapp);
-//               if(data.maxapp >= 2){
-//                   res.send(true);
-//               }
-//               else{
-//                 res.send(false);
-//               }
-//           }
-//       })
-//       .catch((e) => {
-//         res.status(500).send(e);
-//       });
-//   })
+//API for login of user
 
 router.post("/login", async (req, res) => {
     User.findOne({ user: req.body.user }).then((data) => {
         bcrypt.compare(req.body.password, data.password, function (err, result) {
-            // console.log(data);
             if (result) {
                 res.send(data);
             }

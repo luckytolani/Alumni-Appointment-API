@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 
+//DataBase Connection
+
 mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useCreateIndex: true,

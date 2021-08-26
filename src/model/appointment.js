@@ -1,5 +1,8 @@
 const mongoose = require('mongoose')
 
+
+//Schema for collection of appointments
+
 const appointmentSchema = new mongoose.Schema({
     user:{
         type:String,

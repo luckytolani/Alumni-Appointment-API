@@ -1,6 +1,9 @@
 const Activity = require("../model/appointment");
 
 module.exports = function (agenda) {
+
+  // defining JOB Activity of automatic deletion for Slot 1
+
   agenda.define("Fetch Appointment-slot1", async (job) => {
     try {
       const t = new Date()
@@ -18,6 +21,9 @@ module.exports = function (agenda) {
       console.log(e);
     }
   })
+  
+  // defining JOB Activity of automatic deletion for Slot 2
+  
   agenda.define("Fetch Appointment-slot2", async (job) => {
     try {
       const t = new Date()
@@ -35,6 +41,9 @@ module.exports = function (agenda) {
       console.log(e);
     }
   })
+
+  // defining JOB Activity of automatic deletion for Slot 3
+  
   agenda.define("Fetch Appointment-slot3", async (job) => {
     try {
       const t = new Date()
